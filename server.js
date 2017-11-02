@@ -26,10 +26,10 @@ var routes = require("./controllers/burgers_controller.js");
 app.use("/", routes);
 
 // listen on port 3000
-var port = process.env.PORT || 3000;
+var PORT = process.env.PORT || 8080;
 
 db.sequelize.sync().then(function() {
-	app.listen(port, function() {
-    console.log("App listening on port " + port);
+	app.listen(PORT, function() {
+    console.log("App listening on port " + PORT);
 	});
 });
